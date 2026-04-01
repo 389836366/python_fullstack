@@ -1,0 +1,1 @@
+print("Hello,shenzhen 2027! My python fullstack journey begins.")
