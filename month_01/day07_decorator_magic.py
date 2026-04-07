@@ -23,12 +23,14 @@ def timer_decorator(func):
 # ==========================================
 
 # 任务 1：在这个函数头顶上（上一行），加上魔法标签：@timer_decorator
+@timer_decorator
 def download_data():
     print("开始下载鹅厂机密数据...")
     time.sleep(2)  # 强制让程序停顿 2 秒，模拟网络延迟
     print("数据下载完成！")
 
 # 任务 2：在这个函数头顶上，同样加上魔法标签：@timer_decorator
+@timer_decorator
 def calculate_complex_salary(base: float, bonus: float):
     print(f"开始计算薪资：底薪 {base}, 奖金 {bonus}")
     time.sleep(1)  # 模拟复杂的计算停顿 1 秒
