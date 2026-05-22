@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex 弹性盒子布局练习</title>
+    <style>
+        /* 1. 大容器：这代表整个网页的视窗 */
+
+        .chat-container {
+            display: flex;           /* 让里面的内容横向排列 */
+            height: 300px;           /* 给容器一个固定的高度 */
+            border: 2px solid #333;/* 画个灰色方框方便观察 */
+        }
+
+        /* 2. 左侧的聊天历史列表 */
+        .sidebar {
+            width: 200px;
+            background-color: #252526; /* 深灰色 */
+            color: white;
+            padding: 20px;
+        }
+
+        /* 3. 右侧真正的AI对话主区域 */
+        .main-content {
+            flex: 1;                    /* 让右边自动吃掉剩下所有宽度 */
+            background-color: #1e1e1e;/* 极客黑 */
+            color: #4fc1ff;           /* 科技蓝文字 */
+            padding: 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="chat-container">
+        <div class="sidebar">这里是历史对话栏(左)</div>
+        <div class="main-content">这里是AI对话主区域(右)</div>
+    </div>   
+</body>
+</html>
