@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Flexbox的练习</title>
+
+    <style>
+        /* 1.让整个网页主体居中，隔开两个大区块 */
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            font-family: sans-serif;
+            margin-top: 50px;
+        }
+
+        /* 2.给两个大盒子加上边框 */
+        #ai-chat-app,#api-config {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 8px; /* 圆角 */
+            width: 350px;
+        }
+
+        #ai-chat-app,#api-config {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* 统一美化输入框和按钮的尺寸与圆角 */
+        input, button {
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        /* 给按钮加上主题颜色，并实现鼠标放上去变成小手图案 */
+        button {
+            background-color: #24292e;
+            color: white;
+            cursor: pointer; /* 鼠标悬浮时变成小手 */
+            border: none;
+        }
+
+        /* 按钮点击时的微小交互反馈 */
+        button:active {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div id="ai-chat-app">
+        <h3>AI 对话测试接口</h3>
+        <input id="prompt-input" type="text" placeholder="输入提示词..."/>
+        <button id="submit-bin">发送指令</button>
+        <div id="output-box">大模型的回答将渲染在这里...</div>
+    </div>
+    <div id="api-config">
+        <h3>系统设置</h3>
+        <input id="api-key" type="text" placeholder="请输入你的OpenAI API Key"/>
+        <button id="save-key">保存密钥</button>
+    </div>
+</body>
+</html>
